@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>ArtsOnIT_AdvancedSmtp</name>
-    <version>0.1.6</version>
+    <version>0.1.7</version>
     <stability>stable</stability>
     <license>N/A</license>
     <channel>community</channel>
@@ -10,9 +10,9 @@
     <description>Provide the support for all the smtp server (Autentication, SSL)</description>
     <notes>N/A</notes>
     <authors><author><name>Luca</name><user>auto-converted</user><email>me@ziq.it</email></author></authors>
-    <date>2008-08-05</date>
-    <time>12:51:19</time>
-    <contents><target name="magecommunity"><dir name="Mage"><dir name="Advancedsmtp"><dir name="etc"><file name="config.xml" hash="6f90c9f11843eec1d576e0e280a1dbfe"/><file name="system.xml" hash="99e751cdcdb75c42385e3d516f5ebacc"/></dir><dir name="Helper"><file name="Data.php" hash="cbe9dd2a4a39b1e855e1264836bae4e2"/></dir><dir name="Model"><dir name="Config"><dir name="Source"><file name="Auth.php" hash="153d45ac9508e4d53a77926c31af07ea"/></dir></dir><dir name="Email"><file name="Template.php" hash="cf435dec38a9019c2756065f31281b0b"/></dir><file name="Email.php" hash="3284938017185e0c1c26f5b79dfca6dd"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Mage_AdvancedSmtp.xml" hash="7966ef038d36e6cd38a21eb394a6b92f"/></dir></target></contents>
+    <date>2008-10-20</date>
+    <time>18:32:47</time>
+    <contents><target name="magecommunity"><dir name="Mage"><dir name="Advancedsmtp"><dir name="etc"><file name="config.xml" hash="1d85c526a41c29693db623a5fc8dd5e4"/><file name="system.xml" hash="c7c69e1954e24836e3ad5b76e86cc454"/></dir><dir name="Helper"><file name="Data.php" hash="c05de4a4aa9524d5e7f58be8c00538e4"/></dir><dir name="Model"><dir name="Config"><dir name="Source"><file name="Auth.php" hash="153d45ac9508e4d53a77926c31af07ea"/><file name="Ssl.php" hash="11e192713f1a20cd9bb4f0aa9ccbc607"/></dir></dir><dir name="Email"><file name="Template.php" hash="cf435dec38a9019c2756065f31281b0b"/></dir><file name="Email.php" hash="3284938017185e0c1c26f5b79dfca6dd"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Mage_AdvancedSmtp.xml" hash="7966ef038d36e6cd38a21eb394a6b92f"/></dir></target></contents>
     <compatible/>
     <dependencies/>
 </package>

@@ -12,7 +12,7 @@ class Mage_Advancedsmtp_Helper_Data extends Mage_Core_Helper_Abstract
 {
 	public function getTransport()
     {
-        $config = array(
+   $config = array(
 			'port' => Mage::getStoreConfig('advancedsmtp/settings/port')
 		);
 		$config_auth = Mage::getStoreConfig('advancedsmtp/settings/auth');
@@ -22,9 +22,9 @@ class Mage_Advancedsmtp_Helper_Data extends Mage_Core_Helper_Abstract
 			$config['username'] = Mage::getStoreConfig('advancedsmtp/settings/username');
 			$config['password'] = Mage::getStoreConfig('advancedsmtp/settings/password');
 		}
-		if (Mage::getStoreConfig('advancedsmtp/settings/ssl'))
+		if (Mage::getStoreConfig('advancedsmtp/settings/ssl')!= 0)
 		{
-			$config['ssl'] = 'tls';
+			$config['ssl'] = (Mage::getStoreConfig('advancedsmtp/settings/ssl') == 1) ? 'tls' :'ssl';
 		}
 		$transport = new Zend_Mail_Transport_Smtp(Mage::getStoreConfig('advancedsmtp/settings/host'), $config);
 		return $transport;

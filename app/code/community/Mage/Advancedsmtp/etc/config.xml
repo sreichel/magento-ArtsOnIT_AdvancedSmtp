@@ -66,6 +66,7 @@
 				<ssl>0</ssl>
 				<host>localhost</host>
 				<port>25</port>
+				<ssltype></ssltype>
             </settings>
         </advancedsmtp>
     </default>
