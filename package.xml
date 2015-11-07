@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>ArtsOnIT_AdvancedSmtp</name>
+    <version>0.1.5</version>
+    <stability>stable</stability>
+    <license>N/A</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Provide the support for all the smpt server (Autentication, SSL)</summary>
+    <description>Provide the support for all the smpt server (Autentication, SSL)</description>
+    <notes>N/A</notes>
+    <authors><author><name>Luca</name><user>auto-converted</user><email>me@ziq.it</email></author></authors>
+    <date>2008-08-04</date>
+    <time>04:54:04</time>
+    <contents><target name="magecommunity"><dir name="Mage"><dir name="Advancedsmtp"><dir name="etc"><file name="config.xml" hash="6f90c9f11843eec1d576e0e280a1dbfe"/><file name="system.xml" hash="99e751cdcdb75c42385e3d516f5ebacc"/></dir><dir name="Helper"><file name="Data.php" hash="cbe9dd2a4a39b1e855e1264836bae4e2"/></dir><dir name="Model"><dir name="Config"><dir name="Source"><file name="Auth.php" hash="153d45ac9508e4d53a77926c31af07ea"/></dir></dir><dir name="Email"><file name="Template.php" hash="cf435dec38a9019c2756065f31281b0b"/></dir><file name="Email.php" hash="3284938017185e0c1c26f5b79dfca6dd"/></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies/>
+</package>
