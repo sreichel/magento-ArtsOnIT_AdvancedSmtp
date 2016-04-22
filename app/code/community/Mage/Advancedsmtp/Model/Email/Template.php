@@ -11,10 +11,10 @@ class Mage_Advancedsmtp_Model_Email_Template extends Mage_Core_Model_Email_Templ
 {
     public function send($email, $name=null, array $variables = array())
     {
-		if (!Mage::getStoreConfig('advancedsmtp/settings/enabled'))
-		{
-			return parent::send($email, $name, $variables);
-		}
+        if (!Mage::getStoreConfigFlag('advancedsmtp/settings/enabled')) {
+            return parent::send($email, $name, $variables);
+        }
+
         if(!$this->isValidForSend()) {
             return false;
         }
@@ -29,10 +29,9 @@ class Mage_Advancedsmtp_Model_Email_Template extends Mage_Core_Model_Email_Templ
         $mail = $this->getMail();
         if (is_array($email)) {
             foreach ($email as $emailOne) {
-            	$mail->addTo($emailOne, $name);
+                $mail->addTo($emailOne, $name);
             }
-        }
-        else {
+        } else {
             $mail->addTo($email, $name);
         }
 
@@ -47,15 +46,15 @@ class Mage_Advancedsmtp_Model_Email_Template extends Mage_Core_Model_Email_Templ
 
         $mail->setSubject($this->getProcessedTemplateSubject($variables));
         $mail->setFrom($this->getSenderEmail(), $this->getSenderName());
-		
-		$transport = Mage::helper('advancedsmtp')->getTransport();
-		try {
+
+        $transport = Mage::helper('advancedsmtp')->getTransport();
+        try {
             $mail->send($transport); // Zend_Mail warning..
             $this->_mail = null;
-        }
-        catch (Exception $e) {
+        } catch (Exception $e) {
             return false;
         }
+
         return true;
     }
 }

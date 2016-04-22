@@ -11,29 +11,26 @@ class Mage_Advancedsmtp_Model_Email extends Mage_Core_Model_Email
 {
     public function send()
     {
-		if (!Mage::getStoreConfig('advancedsmtp/settings/enabled'))
-		{
-			return parent::send();
-		}
-		
+        if (!Mage::getStoreConfigFlag('advancedsmtp/settings/enabled')) {
+            return parent::send();
+        }
+
         if (Mage::getStoreConfigFlag('system/smtp/disable')) {
             return $this;
         }
-		
+
         $mail = new Zend_Mail();
 
         if (strtolower($this->getType()) == 'html') {
             $mail->setBodyHtml($this->getBody());
-        }
-        else {
+        } else {
             $mail->setBodyText($this->getBody());
         }
-		$transport = Mage::helper('advancedsmtp')->getTransport();
+        $transport = Mage::helper('advancedsmtp')->getTransport();
         $mail->setFrom($this->getFromEmail(), $this->getFromName())
             ->addTo($this->getToEmail(), $this->getToName())
             ->setSubject($this->getSubject());
-			
-		
+
         $mail->send($transport);
 
         return $this;
