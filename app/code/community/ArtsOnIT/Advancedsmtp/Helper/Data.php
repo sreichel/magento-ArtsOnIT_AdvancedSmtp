@@ -8,7 +8,7 @@
  * @author     Calore Luca Erico (l.calore@ArtsOn.it)
  */
 
-class Mage_Advancedsmtp_Helper_Data extends Mage_Core_Helper_Abstract
+class ArtsOnIT_Advancedsmtp_Helper_Data extends Mage_Core_Helper_Abstract
 {
     public function getTransport()
     {

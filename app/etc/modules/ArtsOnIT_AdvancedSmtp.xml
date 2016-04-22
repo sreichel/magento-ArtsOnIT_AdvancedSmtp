@@ -22,9 +22,9 @@
 -->
 <config>
     <modules>
-        <Mage_Advancedsmtp>
+        <ArtsOnIT_Advancedsmtp>
             <active>true</active>
             <codePool>community</codePool>
-        </Mage_Advancedsmtp>
+        </ArtsOnIT_Advancedsmtp>
     </modules>
 </config>

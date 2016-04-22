@@ -7,7 +7,7 @@
  * @copyright  Copyright (c) 2008 ArtsOn.IT(http://www.ArtsOn.it)
  * @author     Calore Luca Erico (l.calore@ArtsOn.it)
  */
-class Mage_Advancedsmtp_Model_Email extends Mage_Core_Model_Email
+class ArtsOnIT_Advancedsmtp_Model_Email extends Mage_Core_Model_Email
 {
     public function send()
     {

@@ -11,9 +11,9 @@
 -->
 <config>
     <modules>
-        <Mage_Advancedsmtp>
+        <ArtsOnIT_Advancedsmtp>
             <version>0.1.7</version>
-        </Mage_Advancedsmtp>
+        </ArtsOnIT_Advancedsmtp>
     </modules>
     <global>
         <models>
@@ -28,11 +28,11 @@
     <adminhtml>
         <translate>
             <modules>
-                <Mage_Advancedsmtp>
+                <ArtsOnIT_Advancedsmtp>
                     <files>
                         <default>Mage_AdvanceSmtp.csv</default>
                     </files>
-                </Mage_Advancedsmtp>
+                </ArtsOnIT_Advancedsmtp>
             </modules>
         </translate>
         <acl>

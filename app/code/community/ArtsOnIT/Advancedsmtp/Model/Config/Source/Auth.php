@@ -1,6 +1,6 @@
 <?php
 
-class Mage_AdvancedSmtp_Model_Config_Source_Auth
+class ArtsOnIT_AdvancedSmtp_Model_Config_Source_Auth
 {
     public function toOptionArray()
     {
