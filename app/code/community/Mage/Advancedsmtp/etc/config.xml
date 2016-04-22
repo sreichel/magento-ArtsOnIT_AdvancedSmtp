@@ -11,21 +11,21 @@
 -->
 <config>
     <modules>
-        <Mage_Advancesmtp>
-            <version>0.1.5</version>
-        </Mage_Advancesmtp>
+        <Mage_Advancedsmtp>
+            <version>0.1.7</version>
+        </Mage_Advancedsmtp>
     </modules>
     <global>
-	<models>
-<core>
-                <rewrite>
-                    <email_template>Mage_Advancedsmtp_Model_Email_Template</email_template>
-					<email>Mage_Advancedsmtp_Model_Email</email>
-                </rewrite>
-            </core>
-    </models>
+        <models>
+                <core>
+                    <rewrite>
+                        <email_template>Mage_Advancedsmtp_Model_Email_Template</email_template>
+                        <email>Mage_Advancedsmtp_Model_Email</email>
+                    </rewrite>
+                </core>
+        </models>
     </global>
-	<adminhtml>
+    <adminhtml>
         <translate>
             <modules>
                 <Mage_Advancedsmtp>
@@ -60,13 +60,13 @@
         <advancedsmtp>
             <settings>
                 <enabled>0</enabled>
-				<auth>login</auth>
-				<username></username>
-				<password></password>
-				<ssl>0</ssl>
-				<host>localhost</host>
-				<port>25</port>
-				<ssltype></ssltype>
+                <auth>login</auth>
+                <username></username>
+                <password></password>
+                <ssl>0</ssl>
+                <host>localhost</host>
+                <port>25</port>
+                <ssltype></ssltype>
             </settings>
         </advancedsmtp>
     </default>
