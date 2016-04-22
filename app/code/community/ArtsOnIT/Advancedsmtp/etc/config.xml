@@ -16,13 +16,21 @@
         </ArtsOnIT_Advancedsmtp>
     </modules>
     <global>
+        <helpers>
+            <advancedsmtp>
+                <class>ArtsOnIT_Advancedsmtp_Helper</class>
+            </advancedsmtp>
+        </helpers>
         <models>
-                <core>
-                    <rewrite>
-                        <email_template>Mage_Advancedsmtp_Model_Email_Template</email_template>
-                        <email>Mage_Advancedsmtp_Model_Email</email>
-                    </rewrite>
-                </core>
+            <advancedsmtp>
+                <class>ArtsOnIT_Advancedsmtp_Model</class>
+            </advancedsmtp>
+            <core>
+                <rewrite>
+                    <email_template>ArtsOnIT_Advancedsmtp_Model_Email_Template</email_template>
+                    <email>ArtsOnIT_Advancedsmtp_Model_Email</email>
+                </rewrite>
+            </core>
         </models>
     </global>
     <adminhtml>
@@ -30,7 +38,7 @@
             <modules>
                 <ArtsOnIT_Advancedsmtp>
                     <files>
-                        <default>Mage_AdvanceSmtp.csv</default>
+                        <default>ArtsOnIT_AdvanceSmtp.csv</default>
                     </files>
                 </ArtsOnIT_Advancedsmtp>
             </modules>
