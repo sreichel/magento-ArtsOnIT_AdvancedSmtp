@@ -1,0 +1,15 @@
+{
+    "name":"artsonit/advanced-smtp",
+    "type":"magento-module",
+    "homepage":"https://github.com/sreichel/magento-ArtsOnIT_AdvancedSmtp",
+    "description":"Provide the support for all the smtp server (Autentication, SSL).",
+    "authors":[
+        {
+            "name":"Luca"
+            "email":"me@ziq.it"
+        }
+    ],
+    "require":{
+        "magento-hackathon/magento-composer-installer":"*"
+    }
+}
