@@ -5,7 +5,7 @@
     "description":"Provide the support for all the smtp server (Autentication, SSL).",
     "authors":[
         {
-            "name":"Luca"
+            "name":"Luca",
             "email":"me@ziq.it"
         }
     ],
