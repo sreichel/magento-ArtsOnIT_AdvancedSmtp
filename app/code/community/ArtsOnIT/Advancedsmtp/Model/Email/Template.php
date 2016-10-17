@@ -19,6 +19,10 @@ class ArtsOnIT_Advancedsmtp_Model_Email_Template extends Mage_Core_Model_Email_T
             return false;
         }
 
+        if (is_array($name)) {
+            $name = $name[0];
+        }
+
         if (is_null($name)) {
             $name = substr($email, 0, strpos($email, '@'));
         }
