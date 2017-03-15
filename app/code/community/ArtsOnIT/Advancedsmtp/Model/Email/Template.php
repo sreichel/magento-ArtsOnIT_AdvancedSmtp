@@ -9,13 +9,13 @@
  */
 class ArtsOnIT_Advancedsmtp_Model_Email_Template extends Mage_Core_Model_Email_Template
 {
-    public function send($email, $name=null, array $variables = array())
+    public function send($email, $name = null, array $variables = array())
     {
         if (!Mage::getStoreConfigFlag('advancedsmtp/settings/enabled')) {
             return parent::send($email, $name, $variables);
         }
 
-        if(!$this->isValidForSend()) {
+        if (!$this->isValidForSend()) {
             return false;
         }
 
@@ -42,7 +42,7 @@ class ArtsOnIT_Advancedsmtp_Model_Email_Template extends Mage_Core_Model_Email_T
         $this->setUseAbsoluteLinks(true);
         $text = $this->getProcessedTemplate($variables, true);
 
-        if($this->isPlain()) {
+        if ($this->isPlain()) {
             $mail->setBodyText($text);
         } else {
             $mail->setBodyHTML($text);
