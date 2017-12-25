@@ -10,6 +10,9 @@
 
 class ArtsOnIT_Advancedsmtp_Helper_Data extends Mage_Core_Helper_Abstract
 {
+    /**
+     * @return Zend_Mail_Transport_Smtp
+     */
     public function getTransport()
     {
         $config = array(

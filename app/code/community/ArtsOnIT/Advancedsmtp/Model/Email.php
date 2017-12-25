@@ -9,6 +9,9 @@
  */
 class ArtsOnIT_Advancedsmtp_Model_Email extends Mage_Core_Model_Email
 {
+    /**
+     * @return $this
+     */
     public function send()
     {
         if (!Mage::getStoreConfigFlag('advancedsmtp/settings/enabled')) {

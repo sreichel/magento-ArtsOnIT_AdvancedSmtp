@@ -9,6 +9,12 @@
  */
 class ArtsOnIT_Advancedsmtp_Model_Email_Template extends Mage_Core_Model_Email_Template
 {
+    /**
+     * @param array|string $email
+     * @param array|string $name
+     * @param array $variables
+     * @return bool
+     */
     public function send($email, $name = null, array $variables = array())
     {
         if (!Mage::getStoreConfigFlag('advancedsmtp/settings/enabled')) {
@@ -40,12 +46,12 @@ class ArtsOnIT_Advancedsmtp_Model_Email_Template extends Mage_Core_Model_Email_T
         }
 
         $this->setUseAbsoluteLinks(true);
-        $text = $this->getProcessedTemplate($variables, true);
+        $text = $this->getProcessedTemplate($variables);
 
         if ($this->isPlain()) {
             $mail->setBodyText($text);
         } else {
-            $mail->setBodyHTML($text);
+            $mail->setBodyHtml($text);
         }
 
         $mail->setSubject($this->getProcessedTemplateSubject($variables));
@@ -53,7 +59,7 @@ class ArtsOnIT_Advancedsmtp_Model_Email_Template extends Mage_Core_Model_Email_T
 
         $transport = Mage::helper('advancedsmtp')->getTransport();
         try {
-            $mail->send($transport); // Zend_Mail warning..
+            $mail->send($transport);
             $this->_mail = null;
         } catch (Exception $e) {
             return false;
