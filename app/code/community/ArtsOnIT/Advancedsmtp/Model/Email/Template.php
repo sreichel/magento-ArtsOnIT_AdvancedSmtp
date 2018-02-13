@@ -25,24 +25,20 @@ class ArtsOnIT_Advancedsmtp_Model_Email_Template extends Mage_Core_Model_Email_T
             return false;
         }
 
-        if (is_array($name)) {
-            $name = $name[0];
+        $emails = array_values((array)$email);
+        $names = is_array($name) ? $name : (array)$name;
+        $names = array_values($names);
+        foreach ($emails as $key => $email) {
+            if (!isset($names[$key])) {
+                $names[$key] = substr($email, 0, strpos($email, '@'));
+            }
         }
-
-        if (is_null($name)) {
-            $name = substr($email, 0, strpos($email, '@'));
-        }
-
-        $variables['email'] = $email;
-        $variables['name'] = $name;
+        $variables['email'] = reset($emails);
+        $variables['name'] = reset($names);
 
         $mail = $this->getMail();
-        if (is_array($email)) {
-            foreach ($email as $emailOne) {
-                $mail->addTo($emailOne, $name);
-            }
-        } else {
-            $mail->addTo($email, $name);
+        foreach ($emails as $key => $email) {
+            $mail->addTo($email, '=?utf-8?B?' . base64_encode($names[$key]) . '?=');
         }
 
         $this->setUseAbsoluteLinks(true);
@@ -51,7 +47,7 @@ class ArtsOnIT_Advancedsmtp_Model_Email_Template extends Mage_Core_Model_Email_T
         if ($this->isPlain()) {
             $mail->setBodyText($text);
         } else {
-            $mail->setBodyHtml($text);
+            $mail->setBodyHTML($text);
         }
 
         $mail->setSubject($this->getProcessedTemplateSubject($variables));
